@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,105 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Transaction:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-2R-q01">
+                                <rect key="frame" x="16" y="78" width="198.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8y-Go-CR5">
+                                <rect key="frame" x="21" y="550" width="558" height="45"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.82745098039999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Complete Transaction">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="ybt-E8-hfw">
+                                <rect key="frame" x="16" y="118" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" shadowImage="Navbar" backIndicatorImage="Navbar" translatesAutoresizingMaskIntoConstraints="NO" id="5B2-Pi-yxX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.19940596820000001" green="0.82867825029999997" blue="0.4984665513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.19940596820000001" green="0.82867825029999997" blue="0.4984665513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Easy Budget" id="kjv-bp-AgF">
+                                        <barButtonItem key="backBarButtonItem" title="&lt;" id="A5G-2W-HQi"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dBX-8e-3IX">
+                                <rect key="frame" x="-5" y="277" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="459980848.57364702">
+                                    <!--2015-07-30 20:27:28 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-3K-vaJ">
+                                <rect key="frame" x="268" y="74" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J8y-Go-CR5" secondAttribute="bottom" constant="5" id="4hf-Jc-Abb"/>
+                            <constraint firstItem="ybt-E8-hfw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="200" id="BOr-ux-NUa"/>
+                            <constraint firstAttribute="centerX" secondItem="ybt-E8-hfw" secondAttribute="centerX" id="EXV-9a-LSa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J8y-Go-CR5" secondAttribute="trailing" constant="5" id="TOm-6R-OvX"/>
+                            <constraint firstAttribute="centerX" secondItem="UFt-2R-q01" secondAttribute="centerX" id="Vc9-BC-cbg"/>
+                            <constraint firstAttribute="centerY" secondItem="UFt-2R-q01" secondAttribute="centerY" constant="150" id="asa-Ek-aad" userLabel="Center Y Alignment - (20) - View - Type Transaction Amount:"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J8y-Go-CR5" secondAttribute="trailing" constant="5" id="peN-pW-wa4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J8y-Go-CR5" secondAttribute="bottom" constant="5" id="zNC-LP-1yu"/>
+                            <constraint firstItem="J8y-Go-CR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="zhb-am-5wO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AddTransaction" destination="J8y-Go-CR5" id="uBH-jS-cmL"/>
+                        <outlet property="TextLabel" destination="UFt-2R-q01" id="LFe-bI-6XP"/>
+                        <outlet property="TransactionDate" destination="4t4-3K-vaJ" id="ifJ-Pn-zUt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-105" y="335"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Ve0-Gx-n7W">
+            <objects>
+                <tableViewController id="ZkT-TF-HMp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z9D-qf-mve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VTN-7z-iKk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VTN-7z-iKk" id="kk3-l9-tRL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZkT-TF-HMp" id="Uvf-ZS-sPT"/>
+                            <outlet property="delegate" destination="ZkT-TF-HMp" id="pKv-wU-KVx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="HCx-Xe-2kS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rb3-dU-ihP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="317"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Navbar" width="640" height="88"/>
+    </resources>
 </document>
